@@ -43,7 +43,7 @@ QuadrotorStudio/
 
 ## Requirements
 
-- MATLAB
+- MATLAB R2023b or newer
 - Robotics System Toolbox
 - Control System Toolbox
 
@@ -52,7 +52,7 @@ QuadrotorStudio/
 Open MATLAB and run:
 
 ```matlab
-cd('C:\Users\TEJAS\OneDrive\Documents\New project\QuadrotorStudio')
+cd('path/to/quadrotor-studio/QuadrotorStudio')
 start_quadrotor_studio
 ```
 
@@ -70,21 +70,27 @@ preview_quadrotor_urdf
 
 ## Controls
 
-- `W / S` move target forward or backward
-- `A / D` move target left or right
-- `R / F` move target up or down
-- `Q / E` rotate target yaw
-- `Space` run or pause the simulation
-- `H` return the target to the hover position
+| Key | Action |
+|-----|--------|
+| `W` / `S` | Move target forward / backward |
+| `A` / `D` | Move target left / right |
+| `R` / `F` | Move target up / down |
+| `Q` / `E` | Rotate target yaw |
+| `Space` | Run / Pause the simulation |
+| `H` | Return to hover position |
 
 ## Main Files
 
-- `start_quadrotor_studio.m` launches the full interactive simulator
-- `quadrotor_pid_live_script.m` runs the vertical PID-control demo
-- `preview_quadrotor_urdf.m` opens a URDF-only preview window
-- `src/QuadrotorStudioApp.m` contains the main simulator UI and rendering logic
-- `src/quadrotorControlStep.m` implements the control law
-- `src/quadrotorDynamicsStep.m` updates the drone rigid-body state
+| File | Description |
+|------|-------------|
+| `start_quadrotor_studio.m` | Launches the full interactive simulator |
+| `quadrotor_pid_live_script.m` | Runs the vertical PID-control demo |
+| `preview_quadrotor_urdf.m` | Opens a URDF-only preview window |
+| `src/QuadrotorStudioApp.m` | Main simulator UI and rendering logic |
+| `src/quadrotorControlStep.m` | Implements the 6-DOF PID control law |
+| `src/quadrotorDynamicsStep.m` | Updates the drone rigid-body state |
+| `src/quadrotorDefaultParams.m` | Default physical parameters |
+| `src/quadrotorInitialState.m` | Initial state vector |
 
 ## Notes
 
@@ -94,4 +100,4 @@ preview_quadrotor_urdf
 
 ## License
 
-This project is provided for educational and demonstration use.
+MIT License — see [LICENSE](../LICENSE) for details.
